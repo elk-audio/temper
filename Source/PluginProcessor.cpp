@@ -254,12 +254,20 @@ void TemperAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
 //==============================================================================
 bool TemperAudioProcessor::hasEditor() const
 {
+#ifdef JUCE_HEADLESS_PLUGIN_CLIENT
+    return false;
+#else
     return true; // (change this to false if you choose to not supply an editor)
+#endif
 }
 
 AudioProcessorEditor* TemperAudioProcessor::createEditor()
 {
+#ifdef JUCE_HEADLESS_PLUGIN_CLIENT
+    return nullptr;
+#else
     return new TemperAudioProcessorEditor (*this, m_params);
+#endif
 }
 
 //==============================================================================

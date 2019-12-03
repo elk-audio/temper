@@ -15,7 +15,7 @@
 #include "FaustUIBridge.h"
 #include "RestrictionProcessor.h"
 
-#include "faust/dsp/dsp.h"
+#include "../Include/faust/dsp/dsp.h"
 
 
 //==============================================================================

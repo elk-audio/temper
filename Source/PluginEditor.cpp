@@ -29,9 +29,10 @@ TemperAudioProcessorEditor::TemperAudioProcessorEditor (TemperAudioProcessor& p,
                           Colour::fromRGBA(255, 126, 0, 255).withAlpha(0.7f));
 
     m_vizPre->toBehind(m_vizPost);
-
+#ifndef JUCE_HEADLESS_PLUGIN_CLIENT
     m_glContext.setComponentPaintingEnabled(true);
     m_glContext.attachTo(*this);
+#endif
 
     setSize (744, 476);
     setLookAndFeel(&laf);
@@ -39,7 +40,9 @@ TemperAudioProcessorEditor::TemperAudioProcessorEditor (TemperAudioProcessor& p,
 
 TemperAudioProcessorEditor::~TemperAudioProcessorEditor()
 {
+#ifndef JUCE_HEADLESS_PLUGIN_CLIENT
     m_glContext.detach();
+#endif
     setLookAndFeel(nullptr);
 }
 

@@ -28,9 +28,9 @@ Compilation options: cpp, -scal -ftz 0
 #include <math.h>
 #include <algorithm>
 
-#include "faust/gui/UI.h"
-#include "faust/gui/meta.h"
-#include "faust/dsp/dsp.h"
+#include "../Include/faust/gui/UI.h"
+#include "../Include/faust/gui/meta.h"
+#include "../Include/faust/dsp/dsp.h"
 
 using std::max;
 using std::min;

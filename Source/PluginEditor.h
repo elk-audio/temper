@@ -41,8 +41,9 @@ private:
     // access the processor object that created it.
     TemperAudioProcessor& processor;
     TemperLookAndFeel laf;
-
+#ifndef JUCE_HEADLESS_PLUGIN_CLIENT
     OpenGLContext m_glContext;
+#endif
     AudioProcessorValueTreeState& m_vts;
 
     ScopedPointer<MainComponent> m_main;

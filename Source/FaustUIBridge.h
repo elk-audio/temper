@@ -13,7 +13,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-#include "faust/gui/UI.h"
+#include "../Include/faust/gui/UI.h"
 
 //==============================================================================
 /**
