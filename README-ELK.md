@@ -23,7 +23,7 @@ Modified for headless plugin build for [Elk Audio OS](https://elk.audio)
 6. Finally cross compile the plugin using:  
 
    ```bash
-   $ AR=arm-elk-linux-gnueabi-ar make -j`nproc` CONFIG=Release CFLAGS="-DJUCE_HEADLESS_PLUGIN_CLIENT=1" TARGET_ARCH="-march=armv8-a -mtune=cortex-a72 -mfpu=neon-vfpv4 -mfloat-abi=hard"
+   $ AR=arm-elk-linux-gnueabi-ar make -j`nproc` CONFIG=Release CFLAGS="-DJUCE_HEADLESS_PLUGIN_CLIENT=1" TARGET_ARCH="-mcpu=cortex-a53 -mtune=cortex-a53 -mfpu=neon-vfpv4 -mfloat-abi=hard"
    ```
 
 ## Additional notes
